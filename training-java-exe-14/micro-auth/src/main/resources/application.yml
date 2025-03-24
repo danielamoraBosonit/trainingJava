@@ -1,0 +1,27 @@
+server:
+  port: 9010
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+  minutes-ttl: 120
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/realnaut
+    driverClassName: org.postgresql.Driver
+    username: realnaut
+    password: realnaut
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
