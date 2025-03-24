@@ -12,10 +12,10 @@ token:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/realnaut
+    url: jdbc:postgresql://localhost:5432/training
     driverClassName: org.postgresql.Driver
-    username: realnaut
-    password: realnaut
+    username: training
+    password: training
 
   sql:
     init:

@@ -1,8 +1,0 @@
-package com.realnaut.content.product_price.domain.repository;
-
-import com.realnaut.content.product_price.domain.entity.ProductPrice;
-
-
-public interface DeleteProductPriceRepository {
-    void delete(ProductPrice productPrice);
-}

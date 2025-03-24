@@ -14,4 +14,4 @@ CREATE TABLE IF NOT EXISTS public.users (
 );
 
 INSERT INTO public.users (id, user_name, password, role) VALUES
-(1, 'realnaut', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'admin');
+(1, 'training', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'admin');

@@ -1,10 +1,10 @@
 
 INSERT INTO employee (name, surnames, birth_date, department, category, online, email, password, role) VALUES
-    ('Carlos', 'Jimenez Garcia', '1984-09-18', 'Desarrollo', 'Senior', false, 'carlosjimenez@realnaut.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'ADMIN'),
-    ('Ana', 'Ruiz Lopez', '1991-01-02', 'QA', 'Midior', false, 'anaruiz@realnaut.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER'),
-    ('Pedro', 'Fernandez Gomez', '1979-04-07', 'Desarrollo', 'Senior', false, 'pedrofernandez@realnaut.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER'),
-    ('Laura', 'Gonzalo Martin', '1999-05-15', 'UX/UI', 'Senior', false, 'lauragonzalo@realnaut.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER'),
-    ('Juan', 'Torres Navarro', '2002-10-27', 'Desarrollo', 'Junior', false, 'juantorres@realnaut.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER');
+    ('Carlos', 'Jimenez Garcia', '1984-09-18', 'Desarrollo', 'Senior', false, 'carlosjimenez@training.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'ADMIN'),
+    ('Ana', 'Ruiz Lopez', '1991-01-02', 'QA', 'Midior', false, 'anaruiz@training.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER'),
+    ('Pedro', 'Fernandez Gomez', '1979-04-07', 'Desarrollo', 'Senior', false, 'pedrofernandez@training.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER'),
+    ('Laura', 'Gonzalo Martin', '1999-05-15', 'UX/UI', 'Senior', false, 'lauragonzalo@training.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER'),
+    ('Juan', 'Torres Navarro', '2002-10-27', 'Desarrollo', 'Junior', false, 'juantorres@training.com', '$2a$10$Urlhrmb7uOznbcnTuuzkiO0FzKLgYZZwaERTKgJfMa0yRWit76GE6', 'USER');
 
 
 INSERT INTO working_calendar (employee_id, start_date, end_date, priority, city_id) VALUES

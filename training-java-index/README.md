@@ -584,7 +584,7 @@ Se parte de un proyecto con 2 módulos (microservicios independientes). Es neces
 
 - Kafka / Zookeeper : Ejecutar `docker-compose up -d` en la carpeta `/kafka` del proyecto.
 - Base de datos MongoDB: `docker pull mongo:latest` y `docker run -d -p 28017:27017 mongo`
-- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=realnaut -e POSTGRES_PASSWORD=realnaut -p 5432:5432 postgres`
+- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=training -e POSTGRES_PASSWORD=training -p 5432:5432 postgres`
 
 ##### Micro 1
 Proyecto Springboot:
@@ -638,7 +638,7 @@ Se parte de un proyecto con 3 módulos (microservicios independientes). Es neces
 
 - Kafka / Zookeeper : Ejecutar `docker-compose up -d` en la carpeta `/kafka` del proyecto.
 - Base de datos MongoDB: `docker pull mongo:latest` y `docker run -d -p 28017:27017 mongo`
-- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=realnaut -e POSTGRES_PASSWORD=realnaut -p 5432:5432 postgres`
+- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=training -e POSTGRES_PASSWORD=training -p 5432:5432 postgres`
 
 ##### Micro 1
 Proyecto Springboot:
@@ -706,7 +706,7 @@ Se parte de un proyecto con 3 módulos (microservicios independientes). Es neces
 
 - Kafka / Zookeeper : Ejecutar `docker-compose up -d` en la carpeta `/kafka` del proyecto.
 - Base de datos MongoDB: `docker pull mongo:latest` y `docker run -d -p 28017:27017 mongo`
-- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=realnaut -e POSTGRES_PASSWORD=realnaut -p 5432:5432 postgres`
+- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=training -e POSTGRES_PASSWORD=training -p 5432:5432 postgres`
 
 ##### Micro 1
 Proyecto Springboot:
@@ -773,7 +773,7 @@ Se parte de un proyecto con 3 módulos (microservicios independientes). Es neces
 
 - Kafka / Zookeeper : Ejecutar `docker-compose up -d` en la carpeta `/kafka` del proyecto.
 - Base de datos MongoDB: `docker pull mongo:latest` y `docker run -d -p 28017:27017 mongo`
-- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=realnaut -e POSTGRES_PASSWORD=realnaut -p 5432:5432 postgres`
+- Base de datos Posgres: `docker pull postgres:latest` y `docker run -d -e POSTGRES_USER=training -e POSTGRES_PASSWORD=training -p 5432:5432 postgres`
 - Memoria cache `docker pull redis:latest` y `docker run -p 6379:6379 -d redis`
 
 ##### Micro 1
