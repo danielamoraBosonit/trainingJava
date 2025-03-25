@@ -508,7 +508,7 @@ Al iniciar el servicio se popula la colección `sale` con los valores del archiv
 - Crear en el micro1 la tabla SQL y estructura para persistir una entidad `statistics` que almacenará las estadísticas por producto.
 - Incorporar Kafka al micro1.
 - Implementar un consumer del topic `statistics-topic` en el micro1 que al recibir un mensaje cree un objeto `statistics` para un producto.
-- Implementar la siguiente lógica descrita en el diagrama: https://github.com/sfvgekko/training-java/training-java-index/blob/main/assets/training-java-exe-11.jpg
+- Implementar la siguiente lógica descrita en el diagrama: https://gitlab.bosonit.com/-/ide/project/santiago.ferreira/training-java/tree/main/-/training-java-index/assets/training-java-exe-11.jpg
   - Cuando se llama al endpoint del micro1 `GetProducts` antes de hacer una llamada Rest al micro2, el servicio revisará si existe en la base de datos H2 un registro para la estadísticas de ese producto.
   - Si existen, las cargará directamente, en caso de que no existan, las recuperará con la petición Rest al micro2.
   - El micro2, siempre que reciba una petición al endpoint `GetStatistics` devolverá las estadísticas y también publicará el mismo objeto en el topi `statistics-topi`, de esta manera el micro1, posteriormente consumirá el mensaje y añadirá las nuevas estadísticas.
@@ -621,7 +621,7 @@ Al iniciar el servicio se popula la colección `sale` con los valores del archiv
 #### Se pide
 - Crear un nuevo micro que sirva tokens de autorización en base a una tabla `Users` de base de datos (que hay que crear).
 - Securizar el endpoint POST addSale del micro2 para recibir un token JWT y permitir o no el acceso.
-- Seguir la arquitectura del diagrama: https://github.com/sfvgekko/training-java/training-java-index/blob/main/assets/training-java-exe-13.jpg
+- Seguir la arquitectura del diagrama: https://gitlab.bosonit.com/-/ide/project/santiago.ferreira/training-java/tree/main/-/training-java-index/assets/training-java-exe-13.jpg
 
 
 ***
