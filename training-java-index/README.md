@@ -42,7 +42,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - JPA
 
 Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
-Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
+Esta tabla se utiliza para controlar el calendario de trabajo de determinados empleados.
 El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y ***GetAll*** de dicha tabla.
 
 Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
@@ -103,7 +103,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - JPA
 
 Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
-Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
+Esta tabla se utiliza para controlar el calendario de trabajo de determinados empleados.
 
 Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
 
@@ -135,7 +135,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - JPA, Mapstruct, Lombok
 
 Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
-Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
+Esta tabla se utiliza para controlar el calendario de trabajo de determinados empleados.
 
 - Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
 
@@ -168,7 +168,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - JPA, Mapstruct, Lombok, Swagger
 
 Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
-Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
+Esta tabla se utiliza para controlar el calendario de trabajo de determinados empleados.
 El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y ***GetAll*** de dicha tabla.
 
 - Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
@@ -198,7 +198,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - jUnit, Mockito
 
 Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
-Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
+Esta tabla se utiliza para controlar el calendario de trabajo de determinados empleados.
 El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y ***GetAll*** de dicha tabla.
 
 - Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
