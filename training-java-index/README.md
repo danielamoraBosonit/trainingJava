@@ -198,7 +198,6 @@ Se parte de un proyecto Springboot con las siguientes características:
 
 Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
 Esta tabla se utiliza para controlar el calendario de trabajo de determinados empleados.
-El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y ***GetAll*** de dicha tabla.
 
 - Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
 - Para acceder a la documentación via swagger: http://localhost:8080/swagger-ui/index.html
@@ -206,18 +205,19 @@ El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y
 
 #### Se pide
 - Modificar el script `data.sql` para añadir una nueva tabla con las siguientes características:
-  - Nombre: `product` con los siguientes campos:
+  - Nombre: `employee` con los siguientes campos:
   - `id`: ***Primary key*** con valor controlado por una secuencia
-  - `description`: varchar(255)
-  - `creation_date`: timestamp
-  - `packaging`: varchar(25)
-  - `units_box`: integer
+  - `name`: varchar(100)
+  - `surnames`: varchar(100)
+  - `birth_date`: timestamp
+  - `deparment`: varchar(50)
+  - `category`: varchar(50)
 
-- Modificar la tabla `product_price` para que el campo `product_id` referencie como ***foreign key*** al `id` de la tabla `product`
-- Modificar las entidades JPA para que la relación entre `product` y `product_price` sea de uno a muchos.
-- Crear la estructura y un endpoint para recuperar un 'product' por 'id'.
-- Crear la estructura y un endpoint para recuperar todos los productos por `packaging` y `units_box` siendo obligagorio el envío de ambos parametros.
-- El objeto `ProductPrice` devuelto tambien debera tener una representacion del objeto `Product`
+- Modificar la tabla `working_calendar` para que el campo `employee_id` referencie como ***foreign key*** al `id` de la tabla `employee`
+- Modificar las entidades JPA para que la relación entre `employee` y `working_calendar` sea de uno a muchos.
+- Crear la estructura y un endpoint para recuperar un 'employee' por 'id'.
+- Crear la estructura y un endpoint para recuperar todos los empleados por `deparment` y `category` siendo obligagorio el envío de ambos parametros.
+- El objeto `WorkingCalendar` devuelto tambien debera tener una representacion del objeto `Employee`
 
 ***
 ## EXERCISE-6. Actuator / App.Properties / Maven Profiles <a name="exe-6"></a>
