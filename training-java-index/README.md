@@ -29,7 +29,7 @@ RESKILLING TRAINING JAVA
 Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-1'
 
 #### Objetivos didácticos
-- Conocer y practicar la arquitectura hegaxonal
+- Conocer y practicar la arquitectura hexagonal
 - Implementar una API Restful en Springboot
 
 #### Descripción
