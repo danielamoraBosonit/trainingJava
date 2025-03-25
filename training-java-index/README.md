@@ -111,7 +111,7 @@ Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
 - Sustituir el mapeado actual del servicio usando la librería ***MAPSTRUCT***. Para ello acudir a ***Maven Repository*** y añadir la dependencia en el archivo ***pom.xml***.
   Esta librería realiza el mapeado de entidades mediante interfaces.
   La implementación del interface se realiza de manera automática durante la compilación del proyecto.
-- Modificar la entidad ProductListOutputDto para incluir un campo calculado que muestre los días que hay entre el start_date y el end_date.
+- Modificar la entidad WorkingCalendarOutputDto para incluir un campo calculado que muestre los días que hay entre el start_date y el end_date.
 - Utilizar las anotaciones de lombok cuando sea posible
 
 ***
