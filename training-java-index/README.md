@@ -102,7 +102,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - Base de datos H2 embebida
 - JPA
 
-Al iniciar el servicio se crea la tabla `product_price` e inserta varios registros a través del archivo `resources/data.sql`.
+Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
 Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
 
 Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
@@ -134,7 +134,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - Base de datos H2 embebida
 - JPA, Mapstruct, Lombok
 
-Al iniciar el servicio se crea la tabla `product_price` e inserta varios registros a través del archivo `resources/data.sql`.
+Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
 Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
 
 - Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
@@ -167,7 +167,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - Base de datos H2 embebida
 - JPA, Mapstruct, Lombok, Swagger
 
-Al iniciar el servicio se crea la tabla `product_price` e inserta varios registros a través del archivo `resources/data.sql`.
+Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
 Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
 El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y ***GetAll*** de dicha tabla.
 
@@ -197,7 +197,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - JPA, Mapstruct, Lombok, Swagger
 - jUnit, Mockito
 
-Al iniciar el servicio se crea la tabla `product_price` e inserta varios registros a través del archivo `resources/data.sql`.
+Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
 Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
 El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y ***GetAll*** de dicha tabla.
 
@@ -289,7 +289,7 @@ Al iniciar el servicio se crean varias tablas y registros a través del script `
   - /actuator/health/custom
 
 #### Se pide
-- En el endpoint existente de `product_price`para obtener todos los elementos, incorporar un objeto en el endpoint de entrada que permita filtrar por cualquiera de los campos de la entidad (excepto los de fecha). Si se envía en ese objeto algún valor, la query a realizar filtraría por ese elemento y los que se envíen.
+- En el endpoint existente de `working_calendar`para obtener todos los elementos, incorporar un objeto en el endpoint de entrada que permita filtrar por cualquiera de los campos de la entidad (excepto los de fecha). Si se envía en ese objeto algún valor, la query a realizar filtraría por ese elemento y los que se envíen.
 - Para esta implementación se utilizarán las clases Specifications de JPA.
 
 
