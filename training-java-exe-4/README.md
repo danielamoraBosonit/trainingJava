@@ -1,3 +1,3 @@
 ## TRAINING BACKEND JAVA
 ### EXERCISES:
-[EXERCISE-4](https://github.com/sfvgekko/training-java/training-java-index/blob/main/README.md#exe-4)
+[EXERCISE-4](https://gitlab.bosonit.com/-/ide/project/santiago.ferreira/training-java/tree/main/-/training-java-index/README.md#exe-4)
