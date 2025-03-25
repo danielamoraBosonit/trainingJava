@@ -41,7 +41,7 @@ Se parte de un proyecto Springboot con las siguientes características:
 - Base de datos H2 embebida
 - JPA
 
-Al iniciar el servicio se crea la tabla `product_price` e inserta varios registros a través del archivo `resources/data.sql`.
+Al iniciar el servicio se crea la tabla `working_calendar` e inserta varios registros a través del archivo `resources/data.sql`.
 Esta tabla se utiliza para controlar los precios de los productos en un determinado rango de tiempo.
 El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y ***GetAll*** de dicha tabla.
 
