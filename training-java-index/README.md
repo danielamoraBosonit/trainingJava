@@ -26,7 +26,7 @@ RESKILLING TRAINING JAVA
 ## EXERCISE-1 - API Rest / Hexagonal Architecture <a name="exe-1"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-1'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-1'
 
 #### Objetivos didácticos
 - Conocer y practicar la arquitectura hegaxonal
@@ -86,7 +86,7 @@ Implementar con la estructura de arquitectura hexagonal las clases necesarias pa
 ## EXERCISE-2. Mapeado de entidades / Lombok <a name="exe-2"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-2'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-2'
 
 #### Objetivos didácticos
 - Manejar el uso de dependencias y plugins en ***Maven***
@@ -118,7 +118,7 @@ Para acceder a la consola de la base de datos: http://localhost:8080/h2-console
 ## EXERCISE-3. Documentación de APIs / Control errores <a name="exe-3"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-3'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-3'
 
 #### Objetivos didácticos
 - Conocer el correcto manejo de los errores en Springboot
@@ -153,7 +153,7 @@ Esta tabla se utiliza para controlar los precios de los productos en un determin
 ## EXERCISE-4. Testing <a name="exe-4"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-4'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-4'
 
 #### Objetivos didácticos
 - Realizar test unitarios en aplicaciones Springboot con jUnit y Mockito
@@ -182,7 +182,7 @@ El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y
 ## EXERCISE-5. JPA <a name="exe-5"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-5'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-5'
 
 #### Objetivos didácticos
 - Utilizar las relaciones de entidades y queries de Jpa 
@@ -224,7 +224,7 @@ El servicio tiene ya implementado una API Rest para los métodos ***GetById*** y
 ## EXERCISE-6. Actuator / App.Properties / Maven Profiles <a name="exe-6"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-6'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-6'
 
 #### Objetivos didácticos
 - Exponer actuator endpoints
@@ -262,7 +262,7 @@ Al iniciar el servicio se crean varias tablas y registros a través del script `
 ## EXERCISE-7. Criteria JPA <a name="exe-7"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-7'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-7'
 
 #### Objetivos didácticos
 - Practicar el uso de las Specifications de JPA para hacer queries complejas.
@@ -297,7 +297,7 @@ Al iniciar el servicio se crean varias tablas y registros a través del script `
 ## EXERCISE-8. MongoDB <a name="exe-8"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-8'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-8'
 
 #### Objetivos didácticos
 Integrar MongoDB en el Micro2.
@@ -352,7 +352,7 @@ Para la base de datos ***Mongo*** se utilizará una imagen dockerizada de la apl
 ## EXERCISE-9. Peticiones Rest Async <a name="exe-9"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-9'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-9'
 
 #### Objetivos didácticos
 Practicar peticiones rest async con webclient.
@@ -404,7 +404,7 @@ Al iniciar el servicio se popula la colección `sale` con los valores del archiv
 ## EXERCISE-10. Kafka Publisher <a name="exe-10"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-10'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-10'
 
 #### Objetivos didácticos
 Integrar kafka en un proyecto Springboot y crear un publisher
@@ -459,7 +459,7 @@ Esto levantara un contenedor de ***kafka*** y otro de ***zookeeper*** necesarios
 ## EXERCISE-11. Kafka Consumer <a name="exe-11"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-11'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-11'
 
 #### Objetivos didácticos
 Consumir mensajes de kafka.
@@ -520,7 +520,7 @@ Al iniciar el servicio se popula la colección `sale` con los valores del archiv
 ## EXERCISE-12. Postgres y Liquibase <a name="exe-12"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-12'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-12'
 
 #### Objetivos didácticos
 - Integrar la librería liquibase de gestión de scripts de base de datos.
@@ -574,7 +574,7 @@ Al iniciar el servicio se popula la colección `sale` con los valores del archiv
 ## EXERCISE-13. Authorization y Resource Servers <a name="exe-13"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-13'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-13'
 
 #### Objetivos didácticos
 - Implementar un authorization y un resource server con token JWT
@@ -628,7 +628,7 @@ Al iniciar el servicio se popula la colección `sale` con los valores del archiv
 ## EXERCISE-14. Springbatch <a name="exe-14"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-14'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-14'
 
 #### Objetivos didácticos
 - Implementar un job de springbatch
@@ -696,7 +696,7 @@ Endpoint con pk: `http://localhost:9000/oauth2/jwks`
 ## EXERCISE-15. Redis <a name="exe-15"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-15'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-15'
 
 #### Objetivos didácticos
 - Implementar una memoria cache.
@@ -763,7 +763,7 @@ Endpoint con pk: `http://localhost:9000/oauth2/jwks`
 ## EXERCISE-16. Aspectos <a name="exe-16"></a>
 
 #### Proyecto de partida
-Github URL: `https://github.com/sfvgekko/training-java/training-java-exe-16'
+Github URL: `https://gitlab.bosonit.com/santiago.ferreira/training-java/-/tree/main/training-java-exe-16'
 
 #### Objetivos didácticos
 - Utlizar la programación orientada a aspectos de Springboot.
