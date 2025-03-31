@@ -392,7 +392,7 @@ Al iniciar el servicio se popula la colección `sale` con los valores del archiv
 - Para acceder a la documentación via swagger: http://localhost:8085/swagger-ui/index.html
 
 #### Se pide
-- Implementar en el micro2 un endpoint que devuelva las estadísticas para un producto concreto. Devolverá un objeto con el código del producto, las ventas totales y el importe total de las ventas.
+- Implementar en el micro2 un endpoint que devuelva las un reporte de fichajes para un empleado concreto. Devolverá un objeto con el código del empleado, las ventas totales y el importe total de las ventas.
 - Implementar en el micro1 un endpoint para recuperar las estadísticas por producto. Este endpoint aceptará como parámetros un array de ints para pedir las estadísticas de varios productos en la misma llamadas.
 - El micro1 realizará una llamada para cada producto al micro2 para obtener las estadísticas de ventas. El micro1 retornará un listado de todas las ventas solicitadas incluyendo en cada una todos los atributos del producto.
 - Esta llamada desde el micro1 al micro2 se realizará mediante webclient y se paralelizará.
