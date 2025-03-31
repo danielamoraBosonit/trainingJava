@@ -338,13 +338,12 @@ Para la base de datos ***Mongo*** se utilizará una imagen dockerizada de la apl
 #### Se pide
 - Integrar MongoDb en el Micro 2.
 - El micro2 arrancará en el puerto 8085.
-- Implementar la estructura para una colección de Mongo de la entidad `sale` con los siguientes atributos:
+- Implementar la estructura para una colección de Mongo de la entidad `time_clock` con los siguientes atributos:
    - `id`: String
-   - `productId`: Integer
-   - `units`: Integer
-   - `saleDate`: LocalDate
-   - `customerId`: Integer
-- Implementar un endpoint para recuperar todas las `sales` y como parámetro opcional el `productId`
+   - `employeeId`: Integer
+   - `time`: Date
+   - `type`: String
+- Implementar un endpoint para recuperar todas los `time_clock` y como parámetro opcional el `employeeId`
 
    
 ***
