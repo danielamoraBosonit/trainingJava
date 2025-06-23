@@ -1,5 +1,6 @@
 package com.training.content.working_calendar.domain.entity;
 
+import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarInputDto;
 import com.training.content.working_calendar.infrastructure.repository.jpa.entity.WorkingCalendarJpa;
 
 import java.time.LocalDateTime;
@@ -20,6 +21,14 @@ public class WorkingCalendar {
         this.priority = workingCalendarJpa.getPriority();
         this.employeeId = workingCalendarJpa.getEmployeeId();
         this.cityId = workingCalendarJpa.getCityId();
+    }
+
+    public WorkingCalendar(WorkingCalendarInputDto workingCalendarInputDto) {
+        this.startDate = workingCalendarInputDto.getStartDate();
+        this.endDate = workingCalendarInputDto.getEndDate();
+        this.priority = workingCalendarInputDto.getPriority();
+        this.employeeId = workingCalendarInputDto.getEmployeeId();
+        this.cityId = workingCalendarInputDto.getCityId();
     }
 
     public int getId() {

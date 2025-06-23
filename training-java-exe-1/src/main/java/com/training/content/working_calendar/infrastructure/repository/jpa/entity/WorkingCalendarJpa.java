@@ -1,5 +1,6 @@
 package com.training.content.working_calendar.infrastructure.repository.jpa.entity;
 
+import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -26,6 +27,17 @@ public class WorkingCalendarJpa {
     @Column(name = "city_id")
     private int cityId;
 
+    public WorkingCalendarJpa() {
+    }
+
+    public WorkingCalendarJpa(WorkingCalendar workingCalendar) {
+        this.id = workingCalendar.getId();
+        this.startDate = workingCalendar.getStartDate();
+        this.endDate = workingCalendar.getEndDate();
+        this.priority = workingCalendar.getPriority();
+        this.employeeId = workingCalendar.getEmployeeId();
+        this.cityId = workingCalendar.getCityId();
+    }
 
     public Integer getId() {
         return id;
