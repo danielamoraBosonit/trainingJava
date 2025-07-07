@@ -5,6 +5,12 @@ import com.training.content.working_calendar.application.mapper.WorkingCalendarM
 import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarInputDto;
 import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarOutputDto;
+import com.training.error.CustomErrorResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +26,18 @@ public class UpdateWorkingCalendarController {
     private final WorkingCalendarMapper mapper;
 
     @PutMapping("/{id}")
+    @Operation(summary = "Fully Update a working calendar")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = WorkingCalendarOutputDto.class)) }),
+            @ApiResponse(responseCode = "400", description = "Bad Request",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = CustomErrorResponse.class)) }),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = CustomErrorResponse.class)) })
+    })
     public WorkingCalendarOutputDto getById(@PathVariable Integer id, @RequestBody WorkingCalendarInputDto workingCalendarInputDto){
 
         WorkingCalendar workingCalendar = useCase.updateWorkingCalendar(id, workingCalendarInputDto);
@@ -28,6 +46,18 @@ public class UpdateWorkingCalendarController {
     }
 
     @PatchMapping("/{id}")
+    @Operation(summary = "Partial Update a working calendar")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = WorkingCalendarOutputDto.class)) }),
+            @ApiResponse(responseCode = "400", description = "Bad Request",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = CustomErrorResponse.class)) }),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error",
+                    content = { @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = CustomErrorResponse.class)) })
+    })
     public WorkingCalendarOutputDto getById(@PathVariable Integer id, @RequestBody Map<String, Object> fields){
 
         WorkingCalendar workingCalendar = useCase.patchUpdateWorkingCalendar(id, fields);
