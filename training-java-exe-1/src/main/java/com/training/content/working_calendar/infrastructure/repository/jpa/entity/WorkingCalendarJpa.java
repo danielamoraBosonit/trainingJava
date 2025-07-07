@@ -1,10 +1,15 @@
 package com.training.content.working_calendar.infrastructure.repository.jpa.entity;
 
-import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "working_calendar")
 public class WorkingCalendarJpa {
@@ -27,63 +32,4 @@ public class WorkingCalendarJpa {
     @Column(name = "city_id")
     private int cityId;
 
-    public WorkingCalendarJpa() {
-    }
-
-    public WorkingCalendarJpa(WorkingCalendar workingCalendar) {
-        this.id = workingCalendar.getId();
-        this.startDate = workingCalendar.getStartDate();
-        this.endDate = workingCalendar.getEndDate();
-        this.priority = workingCalendar.getPriority();
-        this.employeeId = workingCalendar.getEmployeeId();
-        this.cityId = workingCalendar.getCityId();
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(LocalDateTime startDate) {
-        this.startDate = startDate;
-    }
-
-    public LocalDateTime getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(LocalDateTime endDate) {
-        this.endDate = endDate;
-    }
-
-    public int getPriority() {
-        return priority;
-    }
-
-    public void setPriority(int priority) {
-        this.priority = priority;
-    }
-
-    public int getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public int getCityId() {
-        return cityId;
-    }
-
-    public void setCityId(int cityId) {
-        this.cityId = cityId;
-    }
 }
