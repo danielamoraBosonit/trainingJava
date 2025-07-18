@@ -2,6 +2,7 @@ package com.training.content.working_calendar.infrastructure.repository.jpa.enti
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 @Entity
 @Table(name = "working_calendar")
 public class WorkingCalendarJpa {

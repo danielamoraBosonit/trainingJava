@@ -6,6 +6,7 @@ import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarInputDto;
 import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarOutputDto;
 import com.training.error.CustomErrorResponse;
+import com.training.error.CustomException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -38,9 +39,12 @@ public class UpdateWorkingCalendarController {
                     content = { @Content(mediaType = "application/json",
                             schema = @Schema(implementation = CustomErrorResponse.class)) })
     })
-    public WorkingCalendarOutputDto getById(@PathVariable Integer id, @RequestBody WorkingCalendarInputDto workingCalendarInputDto){
+    public WorkingCalendarOutputDto update(@PathVariable Integer id, @RequestBody WorkingCalendarInputDto workingCalendarInputDto) throws CustomException {
 
-        WorkingCalendar workingCalendar = useCase.updateWorkingCalendar(id, workingCalendarInputDto);
+        WorkingCalendar workingCalendarFromInput = mapper.inputDtoToDomain(workingCalendarInputDto);
+        workingCalendarFromInput.setId(id);
+
+        WorkingCalendar workingCalendar = useCase.updateWorkingCalendar(workingCalendarFromInput);
 
         return mapper.domainToOutputDto(workingCalendar);
     }
@@ -58,7 +62,7 @@ public class UpdateWorkingCalendarController {
                     content = { @Content(mediaType = "application/json",
                             schema = @Schema(implementation = CustomErrorResponse.class)) })
     })
-    public WorkingCalendarOutputDto getById(@PathVariable Integer id, @RequestBody Map<String, Object> fields){
+    public WorkingCalendarOutputDto patchUpdate(@PathVariable Integer id, @RequestBody Map<String, Object> fields) throws CustomException {
 
         WorkingCalendar workingCalendar = useCase.patchUpdateWorkingCalendar(id, fields);
 

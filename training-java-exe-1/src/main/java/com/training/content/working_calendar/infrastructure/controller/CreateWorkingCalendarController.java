@@ -39,7 +39,9 @@ public class CreateWorkingCalendarController {
                             schema = @Schema(implementation = CustomErrorResponse.class)) })
     })
     public WorkingCalendarOutputDto createWorkingCalendar(@RequestBody WorkingCalendarInputDto workingCalendarInputDto) {
-        WorkingCalendar workingCalendar = useCase.createWorkingCalendar(workingCalendarInputDto);
+        WorkingCalendar workingCalendarFromInput = mapper.inputDtoToDomain(workingCalendarInputDto);
+
+        WorkingCalendar workingCalendar = useCase.createWorkingCalendar(workingCalendarFromInput);
 
         return mapper.domainToOutputDto(workingCalendar);
     }

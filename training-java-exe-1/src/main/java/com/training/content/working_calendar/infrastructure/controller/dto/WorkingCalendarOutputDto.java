@@ -14,5 +14,6 @@ public class WorkingCalendarOutputDto {
     private int priority;
     private int employeeId;
     private int cityId;
+    private Integer interval;
 
 }

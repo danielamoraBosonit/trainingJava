@@ -1,10 +1,8 @@
 package com.training.content.working_calendar.application.impl;
 
 import com.training.content.working_calendar.application.CreateWorkingCalendarUseCase;
-import com.training.content.working_calendar.application.mapper.WorkingCalendarMapper;
 import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import com.training.content.working_calendar.domain.repository.CreateWorkingCalendarRepository;
-import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarInputDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +12,8 @@ public class CreateWorkingCalendarUseCaseImpl implements CreateWorkingCalendarUs
 
     private final CreateWorkingCalendarRepository repo;
 
-    private final WorkingCalendarMapper mapper;
-
     @Override
-    public WorkingCalendar createWorkingCalendar(WorkingCalendarInputDto workingCalendarInputDto) {
-        WorkingCalendar workingCalendar = mapper.inputDtoToDomain(workingCalendarInputDto);
+    public WorkingCalendar createWorkingCalendar(WorkingCalendar workingCalendar) {
         return this.repo.createWorkingCalendar(workingCalendar);
     }
 }

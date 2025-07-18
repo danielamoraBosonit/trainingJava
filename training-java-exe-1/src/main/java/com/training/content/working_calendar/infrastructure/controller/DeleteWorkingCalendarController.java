@@ -33,7 +33,7 @@ public class DeleteWorkingCalendarController {
     })
     public void deleteById(@PathVariable Integer id){
 
-        useCase.deleteById(id);
+        useCase.delete(id);
     }
 
 }

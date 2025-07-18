@@ -2,10 +2,9 @@ package com.training.content.working_calendar.application.impl;
 
 import com.training.content.working_calendar.application.GetWorkingCalendarUseCase;
 import com.training.content.working_calendar.application.UpdateWorkingCalendarUseCase;
-import com.training.content.working_calendar.application.mapper.WorkingCalendarMapper;
 import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import com.training.content.working_calendar.domain.repository.UpdateWorkingCalendarRepository;
-import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarInputDto;
+import com.training.error.CustomException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ReflectionUtils;
@@ -21,19 +20,14 @@ public class UpdateWorkingCalendarUseCaseImpl implements UpdateWorkingCalendarUs
 
     private final GetWorkingCalendarUseCase getWorkingCalendarUseCase;
 
-    private final WorkingCalendarMapper mapper;
-
     @Override
-    public WorkingCalendar updateWorkingCalendar(Integer id, WorkingCalendarInputDto workingCalendarInputDto) {
+    public WorkingCalendar updateWorkingCalendar(WorkingCalendar workingCalendar) throws CustomException {
 
-        WorkingCalendar workingCalendar = mapper.inputDtoToDomain(workingCalendarInputDto);
-        workingCalendar.setId(id);
-
-        return this.repo.updateWorkingCalendar(id, workingCalendar);
+        return this.repo.updateWorkingCalendar(workingCalendar);
     }
 
     @Override
-    public WorkingCalendar patchUpdateWorkingCalendar(Integer id, Map<String, Object> fields) {
+    public WorkingCalendar patchUpdateWorkingCalendar(Integer id, Map<String, Object> fields) throws CustomException {
 
         WorkingCalendar workingCalendar = getWorkingCalendarUseCase.getById(id);
 
@@ -45,6 +39,6 @@ public class UpdateWorkingCalendarUseCaseImpl implements UpdateWorkingCalendarUs
             }
         }
 
-        return this.repo.updateWorkingCalendar(id, workingCalendar);
+        return this.repo.updateWorkingCalendar(workingCalendar);
     }
 }

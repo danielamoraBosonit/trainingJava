@@ -1,6 +1,7 @@
 package com.training.content.working_calendar.application.impl;
 
 import com.training.content.working_calendar.application.DeleteWorkingCalendarUseCase;
+import com.training.content.working_calendar.application.GetWorkingCalendarUseCase;
 import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import com.training.content.working_calendar.domain.repository.CreateWorkingCalendarRepository;
 import com.training.content.working_calendar.domain.repository.DeleteWorkingCalendarRepository;
@@ -14,8 +15,11 @@ public class DeleteWorkingCalendarUseCaseImpl implements DeleteWorkingCalendarUs
 
     private final DeleteWorkingCalendarRepository repo;
 
+    private final GetWorkingCalendarUseCase getWorkingCalendarUseCase;
+
     @Override
-    public void deleteById(Integer id) {
-        this.repo.deleteById(id);
+    public void delete(Integer id) {
+        WorkingCalendar workingCalendar = getWorkingCalendarUseCase.getById(id);
+        this.repo.delete(workingCalendar);
     }
 }
