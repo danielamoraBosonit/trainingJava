@@ -70,7 +70,7 @@ class UpdateWorkingCalendarUseCaseImplTest {
 
         //Then
         assertEquals(capturedWorkingCalendar.getId(), 1L); //id must no change
-        assertEquals(capturedWorkingCalendar.getEmployeeId(), 1);
+        assertEquals(capturedWorkingCalendar.getEmployeeId().getId(), 1);
         assertEquals(capturedWorkingCalendar.getCityId(), 2);
         assertEquals(capturedWorkingCalendar.getPriority(), 5);
         assertEquals(capturedWorkingCalendar.getStartDate(), LocalDateTime.of(2020, 1, 1, 9, 30, 15));

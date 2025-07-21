@@ -72,14 +72,14 @@ class CreateWorkingCalendarControllerTest {
         WorkingCalendar capturedWorkingCalendar = calendarCaptor.getValue();
 
         //Then
-        assertEquals(3, capturedWorkingCalendar.getEmployeeId());
+        assertEquals(3, capturedWorkingCalendar.getEmployeeId().getId());
         assertEquals(2, capturedWorkingCalendar.getCityId());
         assertEquals(3, capturedWorkingCalendar.getPriority());
         assertEquals(LocalDateTime.of(2022, 1, 1, 10, 0, 0), capturedWorkingCalendar.getStartDate());
         assertEquals(LocalDateTime.of(2022, 1, 10, 10, 0, 0), capturedWorkingCalendar.getEndDate());
 
         assertEquals(workingCalendarExpected.getId(), output.getId());
-        assertEquals(workingCalendarExpected.getEmployeeId(), output.getEmployeeId());
+        assertEquals(workingCalendarExpected.getEmployeeId().getId(), output.getEmployeeId().getId());
         assertEquals(workingCalendarExpected.getCityId(), output.getCityId());
         assertEquals(workingCalendarExpected.getPriority(), output.getPriority());
         assertEquals(workingCalendarExpected.getStartDate(), output.getStartDate());

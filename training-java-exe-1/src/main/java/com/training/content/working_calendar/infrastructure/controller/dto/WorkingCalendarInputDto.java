@@ -12,8 +12,8 @@ public class WorkingCalendarInputDto {
     private LocalDateTime startDate;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime endDate;
-    private int priority;
-    private int employeeId;
-    private int cityId;
+    private Integer priority;
+    private Integer employeeId;
+    private Integer cityId;
 
 }

@@ -42,7 +42,7 @@ class GetWorkingCalendarRepositoryImplTest {
 
         //Then
         assertEquals(workingCalendarJpa.getId(), result.getId());
-        assertEquals(workingCalendarJpa.getEmployeeId(), result.getEmployeeId());
+        assertEquals(workingCalendarJpa.getEmployeeId().getId(), result.getEmployeeId().getId());
         assertEquals(workingCalendarJpa.getStartDate(), result.getStartDate());
         assertEquals(workingCalendarJpa.getEndDate(), result.getEndDate());
         assertEquals(workingCalendarJpa.getCityId(), result.getCityId());

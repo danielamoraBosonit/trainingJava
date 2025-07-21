@@ -1,5 +1,6 @@
 package com.training.content.working_calendar.domain.entity;
 
+import com.training.content.employee.domain.entity.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +18,7 @@ public class WorkingCalendar {
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private int priority;
-    private int employeeId;
+    private Employee employeeId;
     private int cityId;
 
 }

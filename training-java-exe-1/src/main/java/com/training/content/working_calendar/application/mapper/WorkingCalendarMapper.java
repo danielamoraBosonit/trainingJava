@@ -17,6 +17,7 @@ public interface WorkingCalendarMapper {
     WorkingCalendarJpa domainToJpa(WorkingCalendar workingCalendar);
     WorkingCalendar jpaToDomain(WorkingCalendarJpa workingCalendarJpa);
 
+    @Mapping(source = "employeeId", target = "employeeId.id")
     WorkingCalendar inputDtoToDomain(WorkingCalendarInputDto workingCalendarInputDto);
 
     @Mapping(target = "interval",

@@ -86,7 +86,7 @@ class GetWorkingCalendarControllerTest {
 
         //Then
         assertEquals(workingCalendarExpected.getId(), output.getId());
-        assertEquals(workingCalendarExpected.getEmployeeId(), output.getEmployeeId());
+        assertEquals(workingCalendarExpected.getEmployeeId().getId(), output.getEmployeeId().getId());
         assertEquals(workingCalendarExpected.getCityId(), output.getCityId());
         assertEquals(workingCalendarExpected.getPriority(), output.getPriority());
         assertEquals(workingCalendarExpected.getStartDate(), output.getStartDate());

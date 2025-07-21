@@ -1,5 +1,6 @@
 package com.training.content.working_calendar.infrastructure.repository.jpa.entity;
 
+import com.training.content.employee.infrastructure.repository.jpa.entity.EmployeeJpa;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,8 +29,9 @@ public class WorkingCalendarJpa {
 
     private int priority;
 
-    @Column(name = "employee_id")
-    private int employeeId;
+    @ManyToOne
+    @JoinColumn(name="employee_id")
+    private EmployeeJpa employeeId;
 
     @Column(name = "city_id")
     private int cityId;

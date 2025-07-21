@@ -1,5 +1,6 @@
 package com.training.content.working_calendar.application.impl;
 
+import com.training.content.employee.domain.entity.Employee;
 import com.training.content.working_calendar.application.GetWorkingCalendarUseCase;
 import com.training.content.working_calendar.application.UpdateWorkingCalendarUseCase;
 import com.training.content.working_calendar.domain.entity.WorkingCalendar;
@@ -33,9 +34,15 @@ public class UpdateWorkingCalendarUseCaseImpl implements UpdateWorkingCalendarUs
 
         for (Map.Entry<String, Object> entry: fields.entrySet()) {
             if (!entry.getKey().equals("id")) {
-                Field field = ReflectionUtils.findField(WorkingCalendar.class, entry.getKey());
-                field.setAccessible(true);
-                ReflectionUtils.setField(field, workingCalendar, entry.getValue());
+
+                if(entry.getKey().equals("employeeId")) {
+                    workingCalendar.setEmployeeId(Employee.builder().id((int) entry.getValue()).build());
+
+                } else {
+                    Field field = ReflectionUtils.findField(WorkingCalendar.class, entry.getKey());
+                    field.setAccessible(true);
+                    ReflectionUtils.setField(field, workingCalendar, entry.getValue());
+                }
             }
         }
 
