@@ -69,11 +69,11 @@ class UpdateWorkingCalendarUseCaseImplTest {
         WorkingCalendar capturedWorkingCalendar = captor.getValue();
 
         //Then
-        assertEquals(capturedWorkingCalendar.getId(), 1L); //id must no change
-        assertEquals(capturedWorkingCalendar.getEmployeeId().getId(), 1);
-        assertEquals(capturedWorkingCalendar.getCityId(), 2);
-        assertEquals(capturedWorkingCalendar.getPriority(), 5);
-        assertEquals(capturedWorkingCalendar.getStartDate(), LocalDateTime.of(2020, 1, 1, 9, 30, 15));
+        assertEquals(1L, capturedWorkingCalendar.getId()); //id must no change
+        assertEquals(1, capturedWorkingCalendar.getEmployeeId().getId());
+        assertEquals(2, capturedWorkingCalendar.getCityId());
+        assertEquals(5, capturedWorkingCalendar.getPriority());
+        assertEquals(LocalDateTime.of(2020, 1, 1, 9, 30, 15), capturedWorkingCalendar.getStartDate());
         assertNull(capturedWorkingCalendar.getEndDate());
     }
 
