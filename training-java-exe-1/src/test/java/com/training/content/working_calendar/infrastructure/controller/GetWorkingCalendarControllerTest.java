@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -51,7 +52,7 @@ class GetWorkingCalendarControllerTest {
         workingCalendarsExpected.add(TestData.getWorkingCalendar3());
         workingCalendarsExpected.add(TestData.getWorkingCalendar4());
 
-        when(useCase.getAll()).thenReturn(workingCalendarsExpected);
+        when(useCase.getAll(any())).thenReturn(workingCalendarsExpected);
 
         //When
         String responseJson = mockMvc.perform(get("/api/working-calendar/")

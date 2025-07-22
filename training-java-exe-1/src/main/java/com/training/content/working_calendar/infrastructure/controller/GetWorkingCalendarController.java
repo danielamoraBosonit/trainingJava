@@ -3,8 +3,10 @@ package com.training.content.working_calendar.infrastructure.controller;
 import com.training.content.working_calendar.application.GetWorkingCalendarUseCase;
 import com.training.content.working_calendar.application.mapper.WorkingCalendarMapper;
 import com.training.content.working_calendar.domain.entity.WorkingCalendar;
+import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarFilters;
 import com.training.content.working_calendar.infrastructure.controller.dto.WorkingCalendarOutputDto;
 import com.training.error.CustomErrorResponse;
+import com.training.shared.criteria.CriteriaJpaBuilder;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -12,12 +14,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
@@ -42,9 +43,9 @@ public class GetWorkingCalendarController {
                     content = { @Content(mediaType = "application/json",
                             schema = @Schema(implementation = CustomErrorResponse.class)) })
     })
-    public List<WorkingCalendarOutputDto> getAll(){
+    public List<WorkingCalendarOutputDto> getAll(@RequestBody(required = false) WorkingCalendarFilters filters){
 
-        List<WorkingCalendar> workingCalendarList = useCase.getAll();
+        List<WorkingCalendar> workingCalendarList = useCase.getAll(filters);
 
         return workingCalendarList.stream()
                 .map(mapper::domainToOutputDto)

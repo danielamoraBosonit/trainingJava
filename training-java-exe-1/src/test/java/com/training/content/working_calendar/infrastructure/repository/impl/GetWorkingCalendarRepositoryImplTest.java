@@ -10,11 +10,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.jpa.domain.Specification;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
@@ -58,10 +60,10 @@ class GetWorkingCalendarRepositoryImplTest {
         workingCalendarJpaList.add(TestData.getWorkingCalendarJpa3());
         workingCalendarJpaList.add(TestData.getWorkingCalendarJpa4());
 
-        when(repoJpa.findAll()).thenReturn(workingCalendarJpaList);
+        when(repoJpa.findAll(any(Specification.class))).thenReturn(workingCalendarJpaList);
 
         //When
-        List<WorkingCalendar> result = service.getAll();
+        List<WorkingCalendar> result = service.getAll(any());
 
         //Then
         assertEquals(workingCalendarJpaList.size(), result.size());

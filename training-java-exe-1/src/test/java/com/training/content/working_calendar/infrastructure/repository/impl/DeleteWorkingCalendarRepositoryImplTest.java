@@ -42,7 +42,7 @@ class DeleteWorkingCalendarRepositoryImplTest {
         WorkingCalendarJpa capturedWorkingCalendarJpa = captor.getValue();
 
         //Then
-        verify(repoJpa, times(1)).delete(any());
+        verify(repoJpa, times(1)).delete(any(WorkingCalendarJpa.class));
         assertEquals(capturedWorkingCalendarJpa.getId(), workingCalendar.getId()); //id must no change
         assertEquals(capturedWorkingCalendarJpa.getEmployeeId().getId(), workingCalendar.getEmployeeId().getId());
         assertEquals(capturedWorkingCalendarJpa.getCityId(), workingCalendar.getCityId());

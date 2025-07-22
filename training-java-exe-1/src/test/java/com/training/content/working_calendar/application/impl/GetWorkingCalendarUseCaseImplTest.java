@@ -1,14 +1,18 @@
 package com.training.content.working_calendar.application.impl;
 
+import com.training.content.TestData;
+import com.training.content.working_calendar.domain.entity.WorkingCalendar;
 import com.training.content.working_calendar.domain.repository.GetWorkingCalendarRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
 
 @SpringBootTest
 class GetWorkingCalendarUseCaseImplTest {
@@ -34,12 +38,19 @@ class GetWorkingCalendarUseCaseImplTest {
     @Test
     void getAll() {
         //Given
+        List<WorkingCalendar> workingCalendarList = new ArrayList<>();
+        workingCalendarList.add(TestData.getWorkingCalendar1());
+        workingCalendarList.add(TestData.getWorkingCalendar2());
+        workingCalendarList.add(TestData.getWorkingCalendar3());
+        workingCalendarList.add(TestData.getWorkingCalendar4());
+
+        when(repo.getAll(any())).thenReturn(workingCalendarList);
 
         //When
-        service.getAll();
+        List<WorkingCalendar> result = service.getAll(any());
 
         //Then
-        verify(repo, times(1)).getAll();
+        assertEquals(workingCalendarList.size(), result.size());
 
     }
 
